@@ -1,0 +1,56 @@
+.converter-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    text-align: start;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.currency-select-wrapper {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-color 0.3s ease;
+}
+.currency-select-wrapper:focus-within {
+    border: 2px solid #fff;
+}
+
+.currency-flag {
+    width: 16px;
+    height: 16px;
+}
+
+.currency-select {
+    border: none;
+    width: 95%;
+    outline: none; 
+}
