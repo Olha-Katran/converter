@@ -20,6 +20,11 @@ const ConverterForm = () => {
         }
     };
 
+    const getFlagUrl = (currencyCode: string): string => {
+        return `https://flagcdn.com/48x36/${currencyCode.slice(0, 2).toLowerCase()}.png`;
+      };
+      
+
     return (
         <form className="converter-form">
             <div className="form-group">
@@ -33,15 +38,22 @@ const ConverterForm = () => {
                         onFocus={handleFocus}
                         required
                     />
-                    <select
-                        className="currency-select"
-                        value={fromCurrency}
-                        onChange={handleFromCurrencyChange}
-                    >
-                        {currencies.map(currency => (
+                    <div className="currency-select-wrapper">
+                        <img
+                            src={getFlagUrl(fromCurrency)}
+                            alt={`${fromCurrency} flag`}
+                            className="currency-flag"
+                        />
+                        <select
+                            className="currency-select"
+                            value={fromCurrency}
+                            onChange={handleFromCurrencyChange}
+                        >
+                            {currencies.map(currency => (
                             <option key={currency} value={currency}>{currency}</option>
-                        ))}
-                    </select>
+                            ))}
+                        </select>
+                    </div>  
                 </div>
             </div>
 
@@ -55,15 +67,22 @@ const ConverterForm = () => {
                         onChange={handleToAmountChange}
                         required
                     />
-                    <select
-                        className="currency-select"
-                        value={toCurrency}
-                        onChange={handleToCurrencyChange}
-                    >
-                        {currencies.map(currency => (
-                            <option key={currency} value={currency}>{currency}</option>
-                        ))}
-                    </select>
+                    <div className="currency-select-wrapper">
+                        <img
+                            src={getFlagUrl(toCurrency)}
+                            alt={`${toCurrency} flag`}
+                            className="currency-flag"
+                        />
+                        <select
+                            className="currency-select"
+                            value={toCurrency}
+                            onChange={handleToCurrencyChange}
+                        >
+                            {currencies.map(currency => (
+                                <option key={currency} value={currency}>{currency}</option>
+                            ))}
+                        </select>
+                    </div>
                 </div>
             </div>
 
