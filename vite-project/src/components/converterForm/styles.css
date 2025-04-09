@@ -18,6 +18,7 @@
 .input-group {
     display: flex;
     flex-direction: column;
+    caret-color: #ccc;
 }
 
 .form-input {
