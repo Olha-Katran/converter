@@ -1,10 +1,10 @@
-import './App.css'
+import './App.css';
+import Header from './components/header/header';
 
 function App() {
-
   return (
-    <h1>Converter</h1>
+    <Header />
   )
 }
 
-export default App
+export default App;
