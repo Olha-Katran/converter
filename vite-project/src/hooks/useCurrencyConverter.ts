@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchExchangeRate } from "../utils/fetchExchangeRate";
+import { currencyCodes } from "../data/currencyCodes";
 
 const useCurrencyConverter = () => {
   const [fromAmount, setFromAmount] = useState<number>(0);
@@ -8,7 +9,7 @@ const useCurrencyConverter = () => {
   const [toCurrency, setToCurrency] = useState<string>("USD");
   const [conversionRate, setConversionRate] = useState<number>(1);
 
-  const currencies: string[] = ["UAH", "USD", "EUR"];
+  const currencies: string[] = currencyCodes;
 
   useEffect(() => {
     const getExchangeRate = async () => {
