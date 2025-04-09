@@ -1,3 +1,5 @@
+import { HiOutlineSwitchVertical } from "react-icons/hi";
+
 import useCurrencyConverter from "../../hooks/useCurrencyConverter";
 import './styles.css';
 
@@ -12,6 +14,7 @@ const ConverterForm = () => {
         handleToAmountChange,
         handleFromCurrencyChange,
         handleToCurrencyChange,
+        handleSwapCurrencies,
       } = useCurrencyConverter();
 
     const handleFocus = (e: React.FocusEvent<HTMLInputElement>): void => {
@@ -55,6 +58,13 @@ const ConverterForm = () => {
                         </select>
                     </div>  
                 </div>
+            </div>
+
+            <div 
+                className="swap-icon" 
+                onClick={handleSwapCurrencies}
+            >
+                 <HiOutlineSwitchVertical />
             </div>
 
             <div className="form-group">

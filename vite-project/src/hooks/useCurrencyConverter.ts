@@ -21,7 +21,7 @@ const useCurrencyConverter = () => {
     };
 
     getExchangeRate();
-  }, [fromCurrency, toCurrency, fromAmount]);
+  }, [fromCurrency, toCurrency]);
 
   const handleFromAmountChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const value: number = parseFloat(e.target.value);
@@ -43,6 +43,13 @@ const useCurrencyConverter = () => {
     setToCurrency(e.target.value);
   };
 
+  const handleSwapCurrencies = () => {
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+    setFromAmount(toAmount);
+    setToAmount(fromAmount);
+  };
+
   return {
     fromAmount,
     toAmount,
@@ -53,6 +60,7 @@ const useCurrencyConverter = () => {
     handleToAmountChange,
     handleFromCurrencyChange,
     handleToCurrencyChange,
+    handleSwapCurrencies,
   };
 };
 
