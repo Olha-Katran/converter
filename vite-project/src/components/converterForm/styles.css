@@ -54,3 +54,16 @@
     width: 95%;
     outline: none; 
 }
+
+.swap-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 8px;
+  }
+  
+  .swap-icon:hover {
+    color: #42ad6f;
+  }
